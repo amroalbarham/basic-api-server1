@@ -35,7 +35,7 @@ describe('The correct status codes and returned data for each REST route', () =>
       name: 'apple2',
       price: '30',
     };
-    let result1 = await request.post('/api/v1/foods').send(body1);
+    await request.post('/api/v1/foods').send(body1);
     let result2 = await request.post('/api/v1/foods').send(body2);
     id = result2.body.id;
     let result = await request.get('/api/v1/foods');
